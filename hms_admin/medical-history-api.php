@@ -1,8 +1,8 @@
 <?php
 require('include/db.php');
-$eml=$_GET['email'];
+$id=$_GET['id'];
 header('Content-Type:application/json');
-$sql="select PatientName, PatientContno, PatientGender, CreationDate from tblpatient where PatientEmail='$eml'";
+$sql="select PatientName, PatientContno, PatientGender, CreationDate from tblpatient where ID='$id'";
 $query = mysqli_query($con,$sql);
 $count= mysqli_num_rows($query);
 

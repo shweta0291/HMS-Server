@@ -2,7 +2,7 @@
 require('include/db.php');
 $id=$_GET['id'];
 header('Content-Type:application/json');
-$sql="select PatientName, PatientContno, PatientGender, CreationDate from tblpatient where ID='$id'";
+$sql="select ID, PatientName, PatientContno, PatientGender, CreationDate from tblpatient where ID='$id'";
 $query = mysqli_query($con,$sql);
 $count= mysqli_num_rows($query);
 
